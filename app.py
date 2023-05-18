@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 
-# Criamos uma instância do Flask e salvamos na variável app. 
-# É essa variável que representa a aplicação Flask que estamos criando
+# Foi criada uma instância do Flask e salva na variável app. 
+# É essa variável que representa a aplicação Flask que está sendo criada
 app = Flask(__name__)
 
 Itens = [
@@ -87,7 +87,7 @@ Itens = [
     },
 ]
 
-# Definimos que a rota
+# Foi definido que a rota
 # somente '/' traz o json completo
 # '/itens/<id>' traz a informação de um item específico, conforme documentação
 @app.route('/')
@@ -98,7 +98,7 @@ def MostrarTodosItens():
 def MostrarItensPorId(id):
    return(jsonify(Itens[id]))
 
-#Verificamos se o arquivo app.py está sendo executado pelo terminal 
+#E verificado se o arquivo app.py está sendo executado pelo terminal 
 # e, caso positivo, inicia o servidor do Flask
 if __name__=="__main__":
     app.run(debug= True)
