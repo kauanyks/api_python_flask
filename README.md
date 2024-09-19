@@ -1,43 +1,43 @@
-# Introdução
+# Introduction
 
-Desafio de criação de uma API em Python utilizando Flask.
+Challenge of creating an API in Python using Flask.
 
 # API
 
-A API criada retorna dados de modelos dos itens do catálogo da empresa Jost, disponível no link: http://catalogo.jost.com.br/
+The API created returns data from models of items in the Jost company catalog, available at the link: http://catalogo.jost.com.br/
 
-As informações foram inputadas no código através de uma lista de dicionários que contém o nome da peça e os modelos disponíveis. Para que seja possível retornar um JSON com as informações presentes no dicionário, foi utilizada a biblioteca jsonify (no exemplo abaixo, a lista de itens está armazenada na variável "Itens" e o retorno da API está na rota padrão).
+The information was input into the code through a list of dictionaries that contain the name of the part and the available models. In order to be able to return a JSON with the information present in the dictionary, the jsonify library was used (in the example below, the list of items is stored in the "Items" variable and the API return is in the default route).
 ```
 @app.route('/')
 def MostrarTodosItens():
    return(jsonify(Itens))
 ```
 
-Para rodar o código Python, basta rodar o seguinte comando no terminal: set FLASK_APP=app e posteriormente flask run.
+To run the Python code, simply run the following command in the terminal: set FLASK_APP=app and then flask run.
 
-Para acessar o catálogo inteiro no formato JSON, basta acessar a rota padrão (o link aparece como output do *flask run*). Para acessar os modelos de uma peça específica, basta acessar a rota padrão acrescentando /itens/<id_peça>.
+To access the entire catalog in JSON format, simply access the default route (the link appears as output from *flask run*). To access the models of a specific part, simply access the default route by adding /items/<id_part>.
 
-O id de cada item do catálogo segue conforme abaixo:
+The id of each item in the catalog is as follows:
 
-| id | Peça |
+| id | Part |
 | ------------- | ------------- |
-| 0 | Quinta-roda |
-| 1 | Mesa para Quinta-roda |
-| 2 | Pino-rei |
-| 3 | Engate de Contêiner |
-| 4 | Aparelho de Levantamento |
-| 5 | Engate Automático |
-| 6 | Ponteira |
-| 7 | Engate Esférico |
-| 8 | Suspensor Pneumático Semirreboque |
-| 9 | Suspensor Pneumático 3º Eixo |
-| 10 | Suspensor Pneumático Reposição |
-| 11 | Porta Estepe |
-| 12 | Hubodômetro |
+| 0 | Fifth-wheel |
+| 1 | Fifth-wheel table |
+| 2 | Kingpin |
+| 3 | Container hitch |
+| 4 | Lifting device |
+| 5 | Automatic hitch |
+| 6 | Tipper |
+| 7 | Ball hitch |
+| 8 | Semi-trailer pneumatic suspension |
+| 9 | 3rd axle pneumatic suspension |
+| 10 | Replacement Air Suspension |
+| 11 | Spare Tire Holder |
+| 12 | Hubodometer |
 | 13 | Rala |
-| 14 | Suporte Paralama Semirreboque |
-| 15 | Kit para Veículo Trator |
-| 16 | Enganche Automático - Mercado Externo |
-| 17 | Aro Giratorio - Mercado Externo |
-| 18 | Enganche de Contenedor - Mercado Externo |
-| 19 | Levante Neumático - Mercado Externo |
+| 14 | Semi-trailer Fender Support |
+| 15 | Tractor Vehicle Kit |
+| 16 | Automatic Hitch - Foreign Market |
+| 17 | Swivel Ring - Foreign Market |
+| 18 | Container Hitch - Foreign Market |
+| 19 | Pneumatic Lift - Foreign Market |
